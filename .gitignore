@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/src/WinFormsDx/.vs/WinFormsDx
+/src/WinFormsDx/WinFormsPowerTools.Direct2D/bin
+/src/WinFormsDx/WinFormsPowerTools.Direct2D/obj
+/src/WinFormsDx/WinFormsPowerTools.Direct2D.Packages/bin/Debug
+/src/WinFormsDx/WinFormsPowerTools.Direct2D.Packages/obj
+/src/WinFormsDx/NuGet/BuildOut
