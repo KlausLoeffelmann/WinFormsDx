@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinForms.PowerTools.Direct2
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinFormsPowerTools.Direct2D", "WinFormsPowerTools.Direct2D.Packages\WinFormsPowerTools.Direct2D.csproj", "{B4519DDB-E620-46C9-87E0-6732E4794C86}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D2DTestApp", "D2DTestApp\D2DTestApp.csproj", "{07A4B020-3F2F-4344-8BBB-473237497B2B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{B4519DDB-E620-46C9-87E0-6732E4794C86}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4519DDB-E620-46C9-87E0-6732E4794C86}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4519DDB-E620-46C9-87E0-6732E4794C86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07A4B020-3F2F-4344-8BBB-473237497B2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07A4B020-3F2F-4344-8BBB-473237497B2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07A4B020-3F2F-4344-8BBB-473237497B2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07A4B020-3F2F-4344-8BBB-473237497B2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -8,3 +8,6 @@
 /src/WinFormsDx/WinFormsPowerTools.Direct2D.Packages/bin/Debug
 /src/WinFormsDx/WinFormsPowerTools.Direct2D.Packages/obj
 /src/WinFormsDx/NuGet/BuildOut
+/src/WinFormsDx/D2DTestApp/bin/Debug/net8.0-windows
+/src/WinFormsDx/D2DTestApp/obj
+*.user
