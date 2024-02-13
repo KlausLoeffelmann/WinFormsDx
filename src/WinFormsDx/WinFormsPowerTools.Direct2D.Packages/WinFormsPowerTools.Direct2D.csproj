@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<IncludeBuildOutput>true</IncludeBuildOutput>
+		<ProduceReferenceAssembly>false</ProduceReferenceAssembly>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<RepositoryUrl>https://github.com/dotnet/winforms-designer</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<TargetsForTfmSpecificContentInPackage>$(TargetsForTfmSpecificContentInPackage);_GetFilesToPackage</TargetsForTfmSpecificContentInPackage>
+		<RunPostBuildEvent>Always</RunPostBuildEvent>
+		<PackageVersion>0.1.5-Alpha</PackageVersion>
+		<AssemblyVersion>0.1.5</AssemblyVersion>
+		<Authors>Klaus Loeffelmann</Authors>
+		<Copyright>Klaus Loeffelmann</Copyright>
+		<Description>Alpha-Version of a DirectX/DirectWrite implementation for WinForms .NET (6+).</Description>
+		<PackageTags>C#, Visual Basic, Windows Forms, WinForms, .NET, .NET6, DirectX, DirectWrite, Direct2D</PackageTags>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageProjectUrl/>
+		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+		<PackageReleaseNotes>
+			* 2023-11-03: Initial public release for trying out. Very unstable, missing features, lots of bugs, NOT AT ALL for production use.
+		</PackageReleaseNotes>
+	</PropertyGroup>
+
+	<Target Name="_GetFilesToPackage">
+		<ItemGroup>
+			<_File Include="$(SolutionDir)\WinformsPowerTools.Direct2D\bin\$(Configuration)\net8.0-windows\WinformsPowerTools.Direct2D.dll" />
+		</ItemGroup>
+
+		<ItemGroup>
+			<TfmSpecificPackageFile Include="@(_File)" PackagePath="$(BuildOutputTargetFolder)/$(TargetFramework)/%(_File.TargetDir)" />
+		</ItemGroup>
+	</Target>
+
+	<Target Name="CopyPackage" AfterTargets="Pack">
+		<Copy SourceFiles="$(OutputPath)..\$(PackageId).$(PackageVersion).nupkg" DestinationFolder="$(SolutionDir)NuGet\BuildOut\" />
+	</Target>
+
+</Project>

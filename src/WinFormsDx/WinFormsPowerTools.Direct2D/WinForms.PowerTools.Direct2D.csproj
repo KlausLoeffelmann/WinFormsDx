@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="NativeMethods.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="NativeMethods.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+	<PackageReference Include="Microsoft.Windows.CsWin32" Version="0.3.49-beta">
+	  <PrivateAssets>all</PrivateAssets>
+	  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	</PackageReference>
+	<PackageReference Include="Microsoft.WinForms.Designer.SDK" Version="1.9.0-preview.3.24054.5" />
+  </ItemGroup>
+
+</Project>
